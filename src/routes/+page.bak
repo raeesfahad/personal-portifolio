@@ -1,0 +1,227 @@
+<script lang="ts">
+	import { Avatar } from '@skeletonlabs/skeleton';
+	import TypeWriter from 'svelte-typewriter';
+	import { Clock5, Flame, Github, UsersRound } from 'lucide-svelte';
+	import { Instagram } from 'lucide-svelte';
+	import { Linkedin } from 'lucide-svelte';
+	import { Mouse } from 'lucide-svelte';
+	import { ProgressBar } from '@skeletonlabs/skeleton';
+	import Typewriter from 'svelte-typewriter';
+</script>
+
+<!-- First Section -->
+<section class="min-h-[80vh]"> <!-- Adjusted height to 80vh instead of full screen -->
+	<div class="flex flex-row justify-center mt-[100px]">
+		<div class="flex flex-col gap-3">
+			<div class="flex justify-center">
+				<Avatar
+					initials="JD"
+					width="w-24"
+					src="https://api.dicebear.com/9.x/avataaars/svg?seed=FahadKhan"
+				/>
+			</div>
+
+			<h1 class="h1">Fahad Ullah Khan</h1>
+			<Typewriter loop speed="40" cursor>
+				<p class="text-center font-semibold">
+					I am a Software Engineer
+				</p>
+			</Typewriter>
+			
+		</div>
+	</div>
+
+	<div class="flex flex-row justify-center mt-[20px] gap-4">
+		<a href="https://www.github.com/raeesfahad"><Github color="#ffffff" /></a>
+		<a href="https://www.instagram.com/blackhatdude"><Instagram color="#ffffff" /></a>
+		<a href="https://www.linkedin.com/in/raeesfahad/"><Linkedin color="#ffffff" /></a>
+	</div>
+
+	<div class="flex flex-row justify-center mt-[35px]">
+		<button class="btn btn-md variant-filled-error font-semibold w-[200px]">Hire Me</button>
+	</div>
+
+	<div class="flex flex-row justify-center mt-[140px]">
+		<div class="flex flex-col gap-2 justify-center">
+			<p class="font-semibold">Scroll Down</p>
+			<p class="text-center animate-pulse ml-[35px]"><Mouse color="#ffffff" /></p>
+		</div>
+	</div>
+</section>
+
+<!-- Second Section -->
+<section id="me" class="py-10">
+	<div class="flex flex-col mb-[10px]">
+		<h1 class="h2 mt-[50px] text-center">About Me</h1>
+	</div>
+
+	<div class="flex flex-row justify-center">
+		<div class="flex flex-col md:flex-row md:mt-16 gap-10">
+			<div class="mt-[25px] flex justify-center">
+				<Avatar
+					initials="JD"
+					width="w-32 md:w-48"
+					src="https://api.dicebear.com/9.x/avataaars/svg?seed=FahadKhan"
+				/>
+			</div>
+
+			<div class="card card-hover w-[320px] md:w-[700px] h-auto md:h-[280px] mb-[20px] p-5 md:p-9">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+					<div>
+						<p class="text-sm md:text-base font-semibold">
+							I am Fahad Ullah Khan, a Software Developer from Chitral, Pakistan. I have a very rich
+							experience in developing websites and backend services using various technologies.
+						</p>
+
+						<button
+							class="btn btn-md variant-filled-error mt-[25px] text-surface-100 w-full md:w-auto"
+							>Download Resume</button
+						>
+					</div>
+					<div class="flex flex-col gap-5">
+						<div class="flex flex-col gap-2">
+							<div class="flex flex-row justify-between">
+								<h6 class="h6">Python</h6>
+								<h6 class="h6">{90}%</h6>
+							</div>
+							<ProgressBar meter="bg-primary-500" track="bg-primary-500/30" value={90} />
+						</div>
+						<div class="flex flex-col gap-2">
+							<div class="flex flex-row justify-between">
+								<h6 class="h6">JavaScript</h6>
+								<h6 class="h6">{70}%</h6>
+							</div>
+							<ProgressBar meter="bg-tertiary-500" track="bg-tertiary-500/30" value={70} />
+						</div>
+						<div class="flex flex-col gap-2">
+							<div class="flex flex-row justify-between">
+								<h6 class="h6">Database Development</h6>
+								<h6 class="h6">{75}%</h6>
+							</div>
+							<ProgressBar value={75} />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Stats Section -->
+	<!-- Stats Section -->
+<div class="mt-10 flex flex-wrap justify-center items-center gap-4 md:gap-16 p-4">
+    <!-- Projects Completed -->
+    <div class="flex flex-row items-center gap-4 w-[calc(50%-0.5rem)] sm:w-auto">
+        <div>
+            <Flame class="w-12 h-12 md:w-24 md:h-24" />
+        </div>
+        <div class="flex flex-col">
+            <h1 class="h1 text-2xl md:text-4xl">80+</h1>
+            <p class="text-sm md:text-base">Projects Completed</p>
+        </div>
+    </div>
+
+    <!-- Happy Clients -->
+    <div class="flex flex-row items-center gap-4 w-[calc(50%-0.5rem)] sm:w-auto">
+        <div>
+            <UsersRound class="w-12 h-12 md:w-24 md:h-24" />
+        </div>
+        <div class="flex flex-col">
+            <h1 class="h1 text-2xl md:text-4xl">50</h1>
+            <p class="text-sm md:text-base">Happy Clients</p>
+        </div>
+    </div>
+
+    <!-- Hours in Coding -->
+    <div class="flex flex-row items-center gap-4 w-[calc(50%-0.5rem)] sm:w-auto">
+        <div>
+            <Clock5 class="w-12 h-12 md:w-24 md:h-24" />
+        </div>
+        <div class="flex flex-col">
+            <h1 class="h1 text-2xl md:text-4xl">1500+</h1>
+            <p class="text-sm md:text-base">Hours in Coding</p>
+        </div>
+    </div>
+
+    <!-- Hours in Coding (Duplicate) -->
+    <div class="flex flex-row items-center gap-4 w-[calc(50%-0.5rem)] sm:w-auto">
+        <div>
+            <Clock5 class="w-12 h-12 md:w-24 md:h-24" />
+        </div>
+        <div class="flex flex-col">
+            <h1 class="h1 text-2xl md:text-4xl">1500+</h1>
+            <p class="text-sm md:text-base">Hours in Coding</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Third Section -->
+<section id="serv" class="min-h-screen py-10">
+
+	<div class="flex justify-center mb-[24px]">
+		<h1 class="h1">Services</h1>
+	</div>
+
+	<div class="flex flex-col md:flex-row gap-5 justify-center p-4 mt-[20px]">
+		<!-- Web Development Card -->
+		<div class="bg-blue-500 rounded-lg py-6 md:py-8 px-4 w-full md:size-[300px]">
+			<div class="flex flex-row justify-center">
+				<header class="card-header">
+					<img
+						class="size-[60px] md:size-[80px]"
+						src="https://img.icons8.com/?size=100&id=9x65MLqCekT5&format=png&color=000000"
+						alt="web"
+					/>
+				</header>
+			</div>
+			<h5 class="h5 text-center mt-4">Web Developemnt</h5>
+			<p class="mt-2 text-center text-sm text-white">
+				Crafting responsive and user-friendly websites with modern frameworks and technologies to deliver seamless digital experiences.
+			</p>
+		</div>
+
+		<!-- Python Programming Card -->
+		<div class="bg-red-500 rounded-lg py-6 md:py-8 px-4 w-full md:size-[300px]">
+			<div class="flex flex-row justify-center">
+				<header class="card-header">
+					<img
+						class="size-[60px] md:size-[80px]"
+						src="https://img.icons8.com/?size=100&id=A6dniwVPlb17&format=png&color=000000"
+						alt="web"
+					/>
+				</header>
+			</div>
+			<h5 class="h5 text-center mt-4">Data Mining</h5>
+			<p class="mt-2 text-center text-sm text-white">
+				Extracting valuable insights from large datasets using advanced algorithms and tools to drive data-driven decision-making
+			</p>
+		</div>
+		<div class="bg-green-500 rounded-lg py-6 md:py-8 px-4 w-full md:size-[300px]">
+			<div class="flex flex-row justify-center">
+				<header class="card-header">
+					<img
+						class="size-[60px] md:size-[80px]"
+						src="https://img.icons8.com/?size=100&id=ebqYqqDXkhky&format=png&color=000000"
+						alt="web"
+					/>
+				</header>
+			</div>
+			<h5 class="h5 text-center mt-4">Automation</h5>
+			<p class="mt-2 text-center text-sm text-white">
+				Streamlining repetitive tasks and processes through custom scripts and tools to enhance efficiency and productivity.
+			</p>
+		</div>
+	</div>
+
+	   <p class="hidden md:block text-center mt-[40px] text-md">Looking custom soluton? <a href="/" class="anchor">Here</a> to contact me </p>
+</section>
+
+<section id="exp" class="min-h-screen py-10">
+
+	 <div class="flex justify-center">
+
+		<h1 class="h1">Experience</h1>
+
+	 </div>
+
+</section>
