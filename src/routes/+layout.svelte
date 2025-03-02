@@ -3,7 +3,7 @@
 	import '../app.postcss';
 	import { Menu, House, FolderCode, SquareUser, GalleryHorizontalEnd } from 'lucide-svelte';
 	import { getDrawerStore } from '@skeletonlabs/skeleton';
-	import { initializeStores, Drawer } from '@skeletonlabs/skeleton';
+	import { initializeStores, Drawer, Toast } from '@skeletonlabs/skeleton';
 	import { page } from '$app/state';
 
 	const pathname = page.url.pathname
@@ -14,6 +14,7 @@
 </script>
 
 
+ <Toast position="bl"/>
 
 <AppShell>
 	<svelte:fragment slot="header">

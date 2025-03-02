@@ -5,6 +5,7 @@
     export let date_to : string;
     export let date_from : string;
     export let title;
+    export let points : any;
 
 </script>
 
@@ -21,12 +22,13 @@
         </div>
         <div class="mb-6 ms-4 mt-2">
           <h4 class="mb-1.5 text-xl font-semibold">{title}</h4>
-          <p class="mb-3 text-neutral-500 dark:text-neutral-300">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            scelerisque diam non nisi semper, et elementum lorem ornare.
-            Maecenas placerat facilisis mollis. Duis sagittis ligula in
-            sodales vehicula.
-          </p>
+          <ol class="mb-3 text-neutral-500 dark:text-neutral-300">
+            {#if points}
+            {#each points as point}
+            <li class="text-base mb-1 font-semibold text-md">✅ {point}</li>
+            {/each}
+            {/if}
+          </ol>
         </div>
       </li>
 

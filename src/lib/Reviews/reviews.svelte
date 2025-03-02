@@ -32,7 +32,7 @@ function showTestimonial(index: number):void {
                 <p class="text-center text-sm md:text-md">{visibleTestimonial.role}</p>
             </div>
 
-            <div class="card w-[330px] h-[100px] md:w-[550px] text-base py-4 px-5">
+            <div class="card w-[330px] h-[250px] md:w-[550px] md:h-[150px]  text-base py-4 px-5">
                 <p class="text-center font-semibold">
                     {visibleTestimonial.quote}
                 </p>
